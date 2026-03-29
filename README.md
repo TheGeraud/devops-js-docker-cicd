@@ -59,18 +59,20 @@ Il met en place les bases essentielles d’un pipeline CI/CD moderne avec :
     ouvrir http://localhost:3000
   
   4. Exécuter les tests
-
-npm test
+    ```bash
+    npm test
   
   5. Docker : Build & Run
   
 Construire l’image Docker
+  ```bash
   docker build -t thegerauddocker/devops-js-docker-cicd:latest .
   
 Lancer le conteneur
+  ```bash
   docker run -p 3000:3000 thegerauddocker/devops-js-docker-cicd:latest
 
-Verification: http://localhost:3000
+Verification http://localhost:3000
   
   6.Pipeline CI/CD (GitHub Actions)
 
@@ -81,7 +83,9 @@ Le pipeline effectue automatiquement :
 - Exécution des tests
 - Build de l’image Docker
 - Connexion à DockerHub via secrets
-- Push automatique de l'image : docker push thegerauddocker/devops-js-docker-cicd:latest
+- Push automatique de l'image :
+  ```bash
+  docker push thegerauddocker/devops-js-docker-cicd:latest
 
 Secrets configurés dans GitHub :
 - DOCKERHUB_USERNAME
@@ -90,7 +94,7 @@ Secrets configurés dans GitHub :
   7. Image Docker (DockerHub)
  
 L’image est disponible publiquement ici :
-https://hub.docker.com/r/<TON_USERNAME>/devops-js-docker-cicd
+https://hub.docker.com/r/thegerauddocker/devops-js-docker-cicd
  
   8. (Bonus) Déploiement local via Terraform
 
