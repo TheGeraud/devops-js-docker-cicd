@@ -59,17 +59,17 @@ Il met en place les bases essentielles d’un pipeline CI/CD moderne avec :
     ouvrir http://localhost:3000
   
   4. Exécuter les tests
-    ```bash
+    
     npm test
   
   5. Docker : Build & Run
   
 Construire l’image Docker
-  ```bash
+ 
   docker build -t thegerauddocker/devops-js-docker-cicd:latest .
   
 Lancer le conteneur
-  ```bash
+ 
   docker run -p 3000:3000 thegerauddocker/devops-js-docker-cicd:latest
 
 Verification http://localhost:3000
@@ -84,7 +84,7 @@ Le pipeline effectue automatiquement :
 - Build de l’image Docker
 - Connexion à DockerHub via secrets
 - Push automatique de l'image :
-  ```bash
+  
   docker push thegerauddocker/devops-js-docker-cicd:latest
 
 Secrets configurés dans GitHub :
