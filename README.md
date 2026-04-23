@@ -48,7 +48,7 @@ Il met en place les bases essentielles d’un pipeline CI/CD moderne avec :
 └── README.md
 ```
 
- ## 3. Démarer l'application
+ ## 3. Démarrer l'application
 
 - Installer les dépendances
 
