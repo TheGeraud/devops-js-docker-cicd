@@ -14,7 +14,7 @@ Il met en place les bases essentielles d’un pipeline CI/CD moderne avec :
 
 
 
-  1. Objectifs du projet
+ ## 1. Objectifs du projet
 
 - Maîtriser un workflow complet DevOps : **code → test → build → image → push**  
 - Automatiser toutes les étapes via **GitHub Actions**  
@@ -23,8 +23,9 @@ Il met en place les bases essentielles d’un pipeline CI/CD moderne avec :
 
 
 
-  2. Structure du projet
+ ## 2. Structure du projet
 
+```
  devops-js-docker-cicd/
 │
 ├── app/
@@ -45,36 +46,46 @@ Il met en place les bases essentielles d’un pipeline CI/CD moderne avec :
 │   └── main.tf            # (Bonus) Terraform : déploiement du conteneur Docker
 │
 └── README.md
+```
 
-  3. Démarer l'application
+ ## 3. Démarer l'application
 
 - Installer les dépendances
-    ```bash
+
+   ```bash
     npm install
     
 - Lancer l'application
-    npm start
+
+   ```bash
+  npm start
     
 - Tester le navigateur
+
     ouvrir http://localhost:3000
   
   4. Exécuter les tests
-    
+
+    ``` 
     npm test
   
-  5. Docker : Build & Run
+ ## 5. Docker : Build & Run
   
 Construire l’image Docker
- 
+
+  ```bash
   docker build -t thegerauddocker/devops-js-docker-cicd:latest .
-  
+  ```
+
 Lancer le conteneur
- 
+
+  ```bash
   docker run -p 3000:3000 thegerauddocker/devops-js-docker-cicd:latest
+  ```
 
 Verification http://localhost:3000
   
-  6.Pipeline CI/CD (GitHub Actions)
+##  6.Pipeline CI/CD (GitHub Actions)
 
 Le pipeline effectue automatiquement :
 
@@ -91,16 +102,16 @@ Secrets configurés dans GitHub :
 - DOCKERHUB_USERNAME
 - DOCKERHUB_TOKEN
   
-  7. Image Docker (DockerHub)
+##  7. Image Docker (DockerHub)
  
 L’image est disponible publiquement ici :
 https://hub.docker.com/r/thegerauddocker/devops-js-docker-cicd
  
-  8. (Bonus) Déploiement local via Terraform
+##  8. (Bonus) Déploiement local via Terraform
 
 Terraform déploie automatiquement : 
 - Une image Docker
 - Un conteneur exposé sur le port 3000
 
-  
-
+## 📄 Licence
+MIT License - © 2026 TheGeraud
